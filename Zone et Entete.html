@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <p>Entete du main : Naviguer</p>
+      <div role="search">
+        <form action=""></form>
+      </div>
+      <em>role:search Reservé à un champ de recherche ex. algolia</em>
+      <em
+        >Separé bien le zone search et le form pour permettre aux users d'avoir
+        2 facon de naviguer (soit par inpur, soit par zone (search)</em
+      >
+      <nav role="navigation" aria-label="Menu principal">
+        <p>Contenu du menu principal</p>
+      </nav>
+    </header>
+    <main role="main">
+      <nav role="navigation" aria-label="Menu secondaire">
+        <p>Contenu du menu associé</p>
+      </nav>
+      <h1>Principales recommandations en accessibilité</h1>
+      <article role="article" aria-labelledby="article1">
+        <h2 id="article1">WCAG</h2>
+      </article>
+      <article role="article" aria-labelledby="article2">
+        <h2 id="article2">ARIA</h2>
+        <aside role="complementary" aria-labelledby="article2 article2-more">
+          <h3 id="article2-more">Zone secondaire lié à ARIA</h3>
+        </aside>
+        <p>
+          ARIA devrait desparaitre mais en faite ARIA est en train de manger
+          HTML sur le sujet accessibilité
+        </p>
+        <p>Zone HTML = cf. slide du formateur nav article aside</p>
+        <p>Zone = Landmark role en Anglais</p>
+      </article>
+      <em>Par defaut, voice over ne liste pas les articles</em>
+    </main>
+    <main role="main" hidden></main>
+    <footer role="contentinfo">
+      <p>contenu du pied de page</p>
+    </footer>
+  </body>
+</html>

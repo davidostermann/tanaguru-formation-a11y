@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <meta charset="utf-8" />
+  </header>
+  <body>
+    <h1>Mauvaise image</h1>
+    <pre>Slide 125</pre>
+    <p>Recommandation du WCAG de ne pas depasser 80 caractères</p>
+    <img
+      src="https://www.numerique.gouv.fr/assets/img/logos/LogoRF.svg"
+      alt="Logo république française"
+    />
+    <hr />
+    <h1>Image de deco</h1>
+    <img
+      src="https://www.numerique.gouv.fr/assets/img/logos/LogoRF.svg"
+      alt=""
+    />
+    <em>Alt vide pour les iage de deco => image ignorée</em>
+    <hr />
+    <h1>Image porteuse d'info</h1>
+    <img
+      src="https://www.numerique.gouv.fr/assets/img/logos/LogoRF.svg"
+      alt="Logo république française"
+    />
+    <blockquote>En gros, il faut tjrs une balise alt autrement le lecteur d'ecran lit l'url de l'image</blockquote>
+
+    <article>
+      <h2>Exemple DECO ou PORTEUSE D'INFO</h2>
+      <p>
+        I
+        <img
+          src="https://www.emojiall.com/images/svg/blobmoji/emoji_u2764.svg"
+          width="15"
+          alt="coeur rouge"
+        />
+        NY
+      </p>
+      <p>
+        <img
+          src="https://www.emojiall.com/images/svg/blobmoji/emoji_u2764.svg"
+          width="15"
+          alt=""
+        />
+        I LOVE NY
+      </p>
+      <p>
+        <img
+          src="https://www.emojiall.com/images/svg/blobmoji/emoji_u2764.svg"
+          width="15"
+          alt="coeur rouge"
+        />
+        Télécharger l'image
+      </p>
+      <p>
+        Télécharger l'image Coeur Rouge
+        <img
+          src="https://www.emojiall.com/images/svg/blobmoji/emoji_u2764.svg"
+          width="15"
+          alt=""
+        />
+      </p>
+    </article>
+    <article>
+      <h2>Image complexe</h2>
+      <p>
+        Image porteuse de BCP d'info. Le ALT ne va pas suffir. Le ALT donnera le
+        titre de l'image et peut-etre l'info principale
+      </p>
+      <p>Au niveau du référentiel, le ALT est suffisant</p>
+      <p>On peut utiliser longdesc et pointer vers une page ou une ancre</p>
+      <p>Apple n'aime pas longdesc et ne le supporte pas sur VOICE OVER</p>
+      <p>Du coup on precise dans le ALT qu'il y a une description en dessous</p>
+      <p>On peut utliser <pre>aria-describedby</pre> mais vous n'aurez pas le détail de la structure du texte dans voice over :(</p>
+      <p>Les alternatives pour les graphiques sont souvent les tableaux</p>
+      <aside>
+        <h3>SVG</h3>
+        <p>Il y a un bug dans VoiceOver qui lit les SVG dans des balises IMG</p>
+        <p>Pour les SVG porteur d'info, Utiliser les balises <code>title</code> et <code>desc</code> et role="img"</p>
+        <p>Pour les SVG de deco : utliser aria-hidden="true"</p>
+      </aside>
+    </article>
+
+  </body>
+</html>

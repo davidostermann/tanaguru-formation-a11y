@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Les contenus</title>
+  </head>
+  <body>
+    <header>
+      <p>Header</p>
+      <nav>
+        <menu>
+          <menuitem>Coucou1</menuitem>
+          <menuitem>Coucou2</menuitem>
+        </menu>
+      </nav>
+    </header>
+    <main>
+      <h1>Les contenus</h1>
+      <article>
+        <h2>Les listes</h2>
+        <ul>
+          <li>Listes non-ordonnées</li>
+          <li>Listes non-ordonnées</li>
+          <li>Listes non-ordonnées</li>
+        </ul>
+        <ol>
+          <li>Lists ordonnées</li>
+          <li>Lists ordonnées</li>
+          <li>Lists ordonnées</li>
+        </ol>
+        <dl>
+          <dt>Accéssibilité Web</dt>
+          <dd>...</dd>
+          <dd>...</dd>
+          <dt>Autre definition</dt>
+          <dd>...</dd>
+          <dd>...</dd>
+        </dl>
+        <em
+          >dl dt dd peut aussi etre utilisé pour les descriptions mais n'a pas
+          de valeur au niveau des reférentiels WCAG et RGAA mais peut être
+          intéressant pour les lecteurs d'écran en terme d'affordance</em
+        >
+        <p>
+          NE PAS UTILISER DES LISTES SI YA BESOIN DE STRUCTURATION AVEC DES
+          TITTRES
+        </p>
+        <p>Les lecteurs d'ecran ne précise pas le contenu des listes</p>
+        <p>On peut faire des listes nommées avec role region et aria-label</p>
+        <div role="region" aria-label="Liste nommée">
+          <ol>
+            <li>Element d'une liste nommée 1</li>
+            <li>Element d'une liste nommée 2</li>
+          </ol>
+        </div>
+      </article>
+      <article>
+        <h2>Les citations</h2>
+        <blockquote>
+          <p>Citation longue</p>
+        </blockquote>
+        <p>La personne à dit : <q>Blablabla blabla</q></p>
+        <em>Les guillemet doivent être insérer via CSS</em>
+      </article>
+      <article>
+        <h2>Images</h2>
+        <ul>
+          <li>
+            il y plein de type d'image (deco, porteuse d'info, compleser, texte,
+            lien, image legendées)
+          </li>
+        </ul>
+        <a href="./images.html"></a>
+      </article>
+    </main>
+  </body>
+</html>

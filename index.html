@@ -1,12 +1,138 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="UTF-8" />
+    <title>Formation web - Tanaguru</title>
     <script src="script.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
   </head>
   <body>
-    <h1>Hello there!</h1>
-    <a href="/me.html">My other page</a>
+    <section>
+      <h1>doctype</h1>
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <p>Permet de spécifier le language : ici HTML5</p>
+    </section>
+    <section>
+      <h1>html lang</h1>
+      <code>&lt;html lang=&quot;fr&quot;&gt;</code>
+      <p>Permet à Voice Over de caler la bonne voix</p>
+      <p>
+        Demo VoiceOver avec le site elmundo.es, la voix change automatiquement
+        vers une voix espagnol
+      </p>
+      <em
+        >Ya un bug sur la dernière version de MacOs qui switch pas de voix quand
+        la lang du site change</em
+      >
+      <p>
+        La langue ne correpond pas spécialement à la langue majoritaire de la
+        page
+      </p>
+      <p lang="en">This is english</p>
+    </section>
+    <section>
+      <h1>Le sens de lecture</h1>
+      <code>&lt;html lang=&quot;ar&quot; dir=&quot;rtl&quot;&gt;</code>
+      <p>Pour les langue comme l'arabe</p>
+      <p lang="ar" dir="rtl">EXAMPLEأهلا</p>
+      <a href="/me.html">My other page</a>
+    </section>
+    <section>
+      <h1>Le titre de la page</h1>
+      <code>&lt;title&gt;Mon titre&lt;/title&gt;</code>
+      <p>Le titre de la page doit représenter le contenu</p>
+      <p>Si je change de page, le titre doit changer</p>
+      <h2>Tips a11y :</h2>
+      <ul>
+        <li>
+          mettez le nom de la page avant de mettre le nom du site pour faciliter
+          la lecture
+        </li>
+        <li>
+          mettre le numero de la page dans le titre quand tu es sur une
+          pagination
+        </li>
+        <li>Usage des marque-pages</li>
+      </ul>
+      <p>
+        Digression : avec ARIA, tu peux indiquer au navigateur qu'il y a
+        changement de page
+      </p>
+    </section>
+    <section>
+      <h1>Les titres de la page : les entêtes</h1>
+      <code>&lt;h1&gt;Titre principal&lt;/h1&gt;</code>
+      <p>
+        Avec le rotor (voice over), je peux naviguer entre les entete OU les
+        liens, ou ...
+      </p>
+      <p>
+        Si vous faites une bonne structure / hierarchisation d'entete h1 à h6,
+        vous allez permettre une bonne navigation des lecteur d'écran.
+      </p>
+      <p>
+        Il y a une guerre entre reférenceur SEO et consultant accessible. Avec ARIA
+        vous allez pouvoir reconcilier tout le monde
+      </p>
+      <article>
+        <h3>Exemple : recette</h3>
+        <h4>Etape 1</h4>
+        <h4>Etape 2</h4>
+        <p role="heading" aria-level="2">Autres recettes à decouvrir. </p>
+        <p>Ce paragraphe est donc considéré comme un h2 par le lecteur d'ecran</p>
+        <em>Aria n'est par reconnu par le crowler de google donc permet de contourner la prablematique pour le SEO</em>
+      </article>
+      <article>
+        <p>Exemple faire un h7 avec aria pour gerer la structure logique du contenu accessible (!!! une hierarchie trop profonde n'est pas bon non plus)</p>
+      </article>
+      <ul>
+      <li>Plugin chrome headingsMap utile pour voir la hierarchie des pages</li>
+
+      </ul>
+      <link href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi" target="blank"> https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi</link> 
+    </section>
+    <section>
+      <h1>Composition de la page - les nouveaux elements</h1>
+      <p>header nav main aside footer</p>
+      <p>Ne pas depasser 2 niveaux de nav</p>
+      <p>Un seul contenu main affiché par page</p>
+      <p>Article : contenu independant pouvant etre utilisé ailleurs</p>
+      <p>contenu independant de second niveau</p>
+      <p>Voice Over en FR appelle ca des reperes et peut naviguer entre ces different element</p>
+      <h2>Les équivalent ARIA</h2>
+      <p>header div role=banner</p>
+      <p>footer div role=contentinfo</p>
+      <p>main div role=main</p>
+      <p>aside div role=complementary</p>
+      <p>article div role=article</p>
+      <h2>Les tips</h2>
+      <ul>
+        <li>RGAA demande qu'on ajoute les attributs aria en doublon sur les balises html5. Plus besoin de mettre les role en double sur les balises html5 (ca c'etait avant. Le validator du W3C met une alerte si ont ajoute le le role aria : SCHYZOPHRENE</li>
+      </ul>
+      <article>
+        <header role="banner">
+          <p>Entete du site</p>
+          <!--<nav role="navigation">
+            
+          </nav>-->
+        </header>
+        <h1>EXEMPLE Balises html5 + aria</h1>
+        
+      </article>
+    </section>
+    <section>
+      <h1>Plan du document</h1>
+      <p>Il existe dans headingsmap mais n'est pas implémenté par CHROME et pas les lecteur d'ecran</p>
+      <p>A NE PAS UTILISER PCQ PAS IMPLEMENTÉ PAR CHROME (IL FAUT GARDER DES HEADINGS LOGIGIQUE H1 H2 H3</p>
+      <p>Nav article section aside en html5 : balises sectionnante</p>
+      <p>Selon html5 (https://whatwg.org/) , on devrait utiliser des h5 dans chaque section : PERMET LA COMPOSITION :: Firefox comprenr mais pas CHROME</p>
+      <p>Possibilité de faire des header dynamique avec les aria levels. Romain le formateur : https://github.com/w3c/aria/issues/1361</p>
+      <p>en accessibilité, géger les niveaux de titre, c'est un des trucs les plus chiants</p>
+      <p>DU COUP, pas d'intérêt d'utiliser &lt;section&gt;</p>
+      <p>Donc on peut utiliser des h1 sur des zones au meme niveau MAIS PAS des h1 dans ddes zones imbriqués pcq le "plan du document" n'est pas supporté</p>
+      <em>Attention a la refonte de la strucure html pour les utilisateurs de lecteur d'ecran</em>
+      <em>Permettre à l'utilisateur d'aller vite à un contenu et de skip certain contenu</em>
+      <em>Si vous faites un site navigable au clavier, a priori, il sera accessible</em>
+    </section>
   </body>
 </html>
