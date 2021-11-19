@@ -1,4 +1,48 @@
+<!DOCTYPE html>
 <html>
-  <head></head>
-  <body></body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Video</title>
+  </head>
+  <body>
+    <h1>Videos</h1>
+    <h2>Transcription textuelle</h2>
+    <ul>
+      <li>Lien</li>
+      <li>Accordeon</li>
+      <li>Bloc de texte</li>
+    </ul>
+    <p>Les sons qui ont de l'importance doivent être transcris</p>
+    <p>Il existe une api textTrackList</p>
+    <p>
+      Les sous-titres pour l'accessibilité doivent être différents des
+      sous-titres de langue
+    </p>
+    <p>
+      Les balises <code>track</code> pour le chapitrage ne sont pas supporté par
+      les lecteurs
+    </p>
+    <p>il faut specifier <code>kind="caption"</code> pour l'accessibilité</p>
+    <p>
+      Pour les sous-titres, on peut utiliser le format
+      <strong>WEBVTT</strong> qui permet de personnaliser le sous-titrage
+    </p>
+    <p>
+      Charte de qualité des sous-titres :
+      <a
+        href="https://www.csa.fr/Reguler/Espace-juridique/Les-relations-du-CSA-avec-les-editeurs/Chartes-et-autres-guides/Charte-relative-a-la-qualite-du-sous-titrage-a-destination-des-personnes-sourdes-ou-malentendantes-Decembre-2011"
+        >Charte du CSA</a
+      >
+    </p>
+    <p>Il faut pouvoir activer et desactiver les sous-titres</p>
+    <h3>Audio-description</h3>
+    <p>Etendu ou pas</p>
+    <p>
+      API existente mais pas implémenté dans les navigateurs
+      <a href="//developer.mozilla.org/en-US/docs/Web/API/AudioTrackList"
+        >AudioTrackList</a
+      >
+    </p>
+    <p>Le seul moyen est de superposer 2 vidéos</p>
+  </body>
 </html>
