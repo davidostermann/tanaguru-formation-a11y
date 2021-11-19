@@ -1,5 +1,9 @@
 <html>
-  <head></head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formation web - Tanaguru</title>
+    <script src="script.js"></script>
+  </head>
   <body>
     <h1>Tableaux</h1>
     <p>Un tableau doit posseder un resumé et un titre</p>
@@ -7,24 +11,40 @@
     <p>Doit decrire comment est organisé le tableau</p>
     <article>
       <h2>exemple : Correspondance taille de chaussure</h2>
-      <table>
+      <table aria-describedby="tableau-description" border="">
         <caption class="sr-only">
           Correspondance taille de chaussure
         </caption>
         <tbody>
           <tr>
-            <th>Taille</th>
-            <th>Pointure FR</th>
-            <th>Pointure EN</th>
+            <th scope="col">Taille</th>
+            <th scope="col">Pointure FR</th>
+            <th scope="col">Pointure EN</th>
           </tr>
           <tr>
-            <td>27cm</td>
+            <th scope="row">27cm</th>
             <td>43</td>
             <td>8.5</td>
+          </tr>
+          <tr>
+            <th scope="row">28.3cm</th>
+            <td>44</td>
+            <td>9</td>
           </tr>
         </tbody>
       </table>
       <p>https://www.ffoodd.fr/cache-cache-css/ pour cacher le titre</p>
+      <p>Pour respecter RGAA, il faut mettre la description dans le caption</p>
+      <p id="tableau-description">tableau-description</p>
+      <p>thead, tfoot et tbody n'apportent rien en accessibilité</p>
     </article>
+    <p>
+      Il faut mettre des entete meme sur les entete de ligne. Ici les references
+      en cm sont des entetes.
+    </p>
+    <p>
+      Pour les tableaux compliqué avec des colspan, on doit utiliser des headers
+      dans toutes les cellules pour avoir l'info
+    </p>
   </body>
 </html>
