@@ -15,3 +15,166 @@ body {
   width: 1px !important;
   white-space: nowrap !important;
 }
+
+* {
+  font-family: Arial, sans-serif;
+  line-height: 1.5em;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+audio {
+  vertical-align: bottom;
+  width: 100%;
+}
+figcaption {
+  border-top: solid 3px #a1bdd8;
+  color: #999;
+  font-size: 0.7em;
+  padding: 10px;
+}
+figure {
+  margin: 0;
+}
+figure img {
+  vertical-align: bottom;
+}
+h1 {
+  border-bottom: solid 3px #a1bdd8;
+  color: #31587d;
+  font-weight: normal;
+  margin: 0 0 40px 0;
+  padding: 10px;
+  text-align: center;
+}
+h3 {
+  color: #31587d;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 5px 10px 5px 10px;
+}
+h3 a {
+  color: #31587d;
+}
+h3 + p {
+  color: #3f6e9c;
+  font-size: 0.8em;
+  margin: 5px 10px 0 10px;
+  padding: 0 0 20px 0;
+}
+ul {
+  color: #608db7;
+  font-size: 0.65em;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+li {
+  background-color: #a1bdd8;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  margin-right: 6px;
+  padding: 4px 6px;
+}
+#implementations > td > div {
+  display: inline-block;
+  margin: 10px;
+  max-width: 240px;
+  text-align: left;
+  vertical-align: top;
+}
+#implementations > td > div {
+  background-color: #fff;
+  box-shadow: 0 0 10px #999;
+  margin-bottom: 20px;
+}
+a.block-link {
+  display: block;
+  outline: dashed 3px transparent;
+}
+a.block-link:focus {
+  outline-color: red;
+}
+a.block-link-js {
+  outline: none;
+}
+div.block-link {
+  position: relative;
+}
+div.block-link a {
+  outline: none;
+}
+div.block-link a::before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.block-link a:focus::before {
+  outline: dashed 3px red;
+}
+div.block-link-js-cursor {
+  cursor: pointer;
+  outline: dashed 3px transparent;
+}
+div.block-link-js-focus {
+  outline-color: red;
+}
+h2 {
+  font-weight: normal;
+  margin-top: 0;
+}
+.restitution td {
+  text-align: center;
+  vertical-align: middle;
+}
+.transcription {
+  font-size: 0.75em;
+}
+.transcription .at {
+  color: #3f6e9c;
+}
+.transcription .atkaboom {
+  color: red;
+}
+.restitution {
+  border-top: solid 1px #a1bdd8;
+}
+.restitution-even,
+.restitution-even + .transcription {
+  background-color: rgba(187, 220, 255, 0.5);
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto 40px auto;
+}
+td,
+th[scope='row'] {
+  padding: 10px;
+  vertical-align: top;
+}
+th ~ td {
+  width: 240px;
+}
+th[scope='col'] {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}

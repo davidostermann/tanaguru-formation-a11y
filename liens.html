@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Liens exemple</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <article>
+      <h1>Liens dans tableau</h1>
+      <table>
+        <caption>
+          liste des élèves
+        </caption>
+        <tr>
+          <th scope="col">Nom de la famille</th>
+          <th scope="col">Prénom</th>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Gervois</td>
+          <td>Romain</td>
+          <td>
+            <ul>
+              <li>
+                <a href="">Modifier la fiche</a>
+              </li>
+              <li><a href="">Supprimer la fiche</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th id="eleve2nom">Gervois</th>
+          <th id="eleve2prenom">Arnaud</th>
+          <td headers="eleve2nom eleve2prenom">
+            <ul>
+              <li>
+                <a href="">Modifier la fiche</a>
+              </li>
+              <li><a href="">Supprimer la fiche</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <h1>Liens dans liste</h1>
+      <p>
+        Le lecteur d'écran peut remonter dans les liste pour récupérer le
+        contexte
+      </p>
+      <ul>
+        <li>Rapport d'activité 2021 <a href="">Télécharger</a></li>
+      </ul>
+      <ol>
+        <li>
+          <ul>
+            Rapport 2021
+            <li><a href="">Consulter en ligne</a></li>
+            <li><a href="">Télécharger</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            Rapport 2020
+            <li><a href="">Consulter en ligne</a></li>
+            <li><a href="">Télécharger</a></li>
+          </ul>
+        </li>
+      </ol>
+    </article>
+    <article>
+      <h1>Soyons malin pour les liens sortants</h1>
+      <a href="" target="_blank"
+        >Google <img src="" alt="(Nouvelle fenêtre)"
+      /></a>
+      <p>Sera lu par le PE en "lien google nouvelle fenetre"</p>
+    </article>
+    <article>
+      <h1>ARIA et les liens</h1>
+      <a href="" target="_blank" aria-label="Google, moteur de recherche"
+        >Google</a
+      >
+      <p>Sera lu par le PE en "lien google nouvelle fenetre"</p>
+    </article>
+    <article>
+      <h1>Lien composite</h1>
+    </article>
+    <article>
+      <h1>Lien blocks</h1>
+      <p>
+        La meilleur chose à faire, c'est d'utiliser un tricks CSS en faisant que
+        le titre s'etend sur l'intégralité du block
+      </p>
+      <div>
+        <a href="http://www.google.fr" class="block-link">
+          <figure role="group">
+            <img
+              src="photo.png"
+              alt="Photo (référence 1)"
+              height="120"
+              width="240"
+            />
+            <figcaption>
+              Légende de la photo<span> (référence 1)</span>.
+            </figcaption>
+          </figure>
+          <ul>
+            <li>Tag 1</li>
+            <li>Tag 2</li>
+            <li>Tag 3</li>
+          </ul>
+          <h3>Titre de l'article</h3>
+          <p>Paragraphe introductif</p>
+        </a>
+      </div>
+      <div href="http://www.google.fr" class="block-link">
+        <figure role="group">
+          <img
+            src="photo.png"
+            alt="Photo (référence 1)"
+            height="120"
+            width="240"
+          />
+          <figcaption>
+            Légende de la photo<span> (référence 1)</span>.
+          </figcaption>
+        </figure>
+        <ul>
+          <li>Tag 1</li>
+          <li>Tag 2</li>
+          <li>Tag 3</li>
+        </ul>
+        <h3>
+          <a href="http://www.google.fr">Titre de l'article</a>
+        </h3>
+        <p>Paragraphe introductif</p>
+      </div>
+    </article>
+  </body>
+</html>
